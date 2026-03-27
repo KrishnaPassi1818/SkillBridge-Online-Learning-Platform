@@ -191,7 +191,6 @@ nav {
 .brand-icons {
     width: 100%;
     margin: 6rem auto;
-    background-color: #adadad;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
@@ -721,8 +720,5 @@ footer {
     }
     .price-buttons {
         text-align: center;
-    }
-    nav {
-        none
     }
 }
