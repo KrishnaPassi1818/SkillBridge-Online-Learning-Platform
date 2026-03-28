@@ -114,7 +114,7 @@ nav {
     width: 90%;
     display: flex;
     align-items: center;
-    margin: 5rem auto 10rem auto;
+    margin: 5rem auto 6rem auto;
     justify-content: space-between;
 }
 
@@ -136,4 +136,125 @@ video {
     height: auto;
     display: block;
     margin: 0rem auto 6rem auto;
+}
+
+.timeline {
+    width: 90%;
+    margin: 0rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.stage-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: end;
+}
+
+.stage-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 1rem 0rem 3rem 0rem;
+    color: #454545;
+}
+
+.modules {
+    display: flex;
+    flex-direction: column;
+}
+
+.module-no {
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: 0.2s;
+}
+.module-no:hover {
+    border: 1px solid #FF9500;
+    .module-title h6 {
+        background-color: #ffedd3;
+        border-radius: 2rem;
+        padding: 0.2rem;
+    }
+}
+
+.module-title {
+    display: flex;
+    justify-content: space-between;
+}
+.module-title p {
+    color: black;
+    font-weight: 500;
+}
+.module-title h6 {
+    display: flex;
+    column-gap: 0.4rem;
+    align-items: center;
+}
+
+.lesson-no {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+}
+
+footer {
+    margin: 0rem auto;
+    padding: 4rem 3rem;
+    width: 100%;
+    background-color: #FF9500;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list li {
+    display: flex;
+    padding: 0.4rem 0rem;
+    color: #ffffff;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+#footer-logo {
+    margin-bottom: 2rem;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    border: 2px solid antiquewhite;
+}
+
+.footer-title {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-title p {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-list img {
+    padding: 0rem 0.6rem;
+}
+
+.copyright {
+    margin-top: 3rem;
+    text-align: center;
 }
