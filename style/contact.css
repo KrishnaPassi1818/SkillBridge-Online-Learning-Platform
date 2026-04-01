@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    margin: 1rem auto auto;
+    width: 98%;
+}
+
+.top-banner {
+    display: flex;
+    padding: 0.6rem 0rem;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #FF9500;
+    border-radius: 0.4rem;
+    width: 100%;
+    height: 35.7%;
+}
+
+.top-banner img {
+    width: 1rem;
+    margin-left: 1rem;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0rem ;
+    height: 64.3%;
+}
+.container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: start;
+    padding-left: 4rem;
+    align-items: center;
+}
+.logo img{
+    width: 2rem;
+    height: auto;
+    margin-right: 3rem;
+}
+.nev-items ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.container a {
+    color: #454545;
+    transition: 0.2s;
+}
+.container a:hover{
+    color:#FF9500;
+    text-decoration: underline;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: end;
+    padding-right: 4rem;
+    width: 50%;
+    height: 100%;
+}
+.buttons-container button {
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+}
+
+#btn1 {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    color: #454545;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#btn1:hover{
+    font-weight: 600;
+}
+#btn2 {
+    background-color: #FF9500;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+#btn2:hover{
+    transform: scale(90%);
+    font-weight: 600;
+}
+
+.hero-section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 5rem auto 6rem auto;
+    justify-content: space-between;
+}
+
+.hero-heading {
+    width: 40%;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.4s;
+}
+.hero-heading:hover {
+    color: #FF9500;
+}
+
+.hero-info {
+    width: 50%;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #454545;
+}
+
+.contact-area {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.left-area {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.info form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1.6rem;
+}
+
+.info input {
+    margin: 0.4rem 0 0 0;
+    width: 16rem;
+    padding: 0.6rem 2rem 0.6rem 0.6rem;
+}
+.info input:focus {
+    outline: none;
+    box-shadow: 1px 1px 4px #000000;
+    border-radius: 8px;
+}
+
+.message textarea{
+    margin: 0.4rem 0 0 0;
+    width: 22rem;
+    padding: 0.6rem 2rem 0.6rem 0.6rem;
+}
+.message textarea:focus {
+    outline: none;
+    box-shadow: 1px 1px 4px #000000;
+    border-radius: 8px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    background-color: #FF9500;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.btn button:hover{
+    transform: scale(90%);
+    font-weight: 600;
+}
+
+.right-area {
+    padding: 2rem;
+}
+
+.right-area div {
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.right-area div img {
+    width: 1.4rem;
+    margin: 1rem;
+}
+
+
+/* Adding .right-area makes this rule stronger */
+.right-area .social-icon div{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: auto; /* Overrides the 10rem height from .right-area div */
+}
+
+/* Adding .right-area here too to protect the inner divs */
+.right-area .social-icon div div{
+    width: auto; /* Overrides the 100% width from .right-area div */
+    height: auto;
+}
+.right-area .social-icon span {
+    display: block;
+}
+
+footer {
+    margin: 2rem auto 0rem auto;
+    padding: 4rem 3rem;
+    width: 100%;
+    background-color: #FF9500;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list li {
+    display: flex;
+    padding: 0.4rem 0rem;
+    color: #ffffff;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+#footer-logo {
+    margin-bottom: 2rem;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    border: 2px solid antiquewhite;
+}
+
+.footer-title {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-title p {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-list img {
+    padding: 0rem 0.6rem;
+}
+
+.copyright {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
