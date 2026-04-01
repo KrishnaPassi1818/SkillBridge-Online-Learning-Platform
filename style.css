@@ -416,6 +416,9 @@ video {
     .course-info-2 h5{
         color: #FF9500;
     }
+    .course-info-2 a {
+        color: #FF9500;
+    }
 }
 
 .course-image img {
@@ -451,6 +454,13 @@ video {
     cursor: pointer;
     margin: 2rem auto 0.4rem auto;
     text-align: center;
+}
+
+.course-info-2 a {
+    color: #454545;
+}
+.course-info-2 a:hover {
+    color: #000000;
 }
 .course-info-2 h6:hover {
     color: #191919;
