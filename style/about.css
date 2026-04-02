@@ -147,7 +147,7 @@ nav {
     width: 50%;
     height: 100%;
 }
-.buttons-container button {
+.buttons-container a {
     padding: 0.8rem 1.8rem;
     cursor: pointer;
 }

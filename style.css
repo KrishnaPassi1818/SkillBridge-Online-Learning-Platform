@@ -147,7 +147,7 @@ nav {
     width: 50%;
     height: 100%;
 }
-.buttons-container button {
+.buttons-container a {
     padding: 0.8rem 1.8rem;
     cursor: pointer;
 }
@@ -225,7 +225,7 @@ nav {
     font-size: 1rem;
 }
 
-.hero-buttons button {
+.hero-buttons a {
     padding: 0.8rem 2rem;
     color: #ffffff;
     border-radius: 0.4rem;
@@ -748,10 +748,14 @@ footer {
     margin-bottom: 1rem;
 }
 
-.footer-title p {
+.footer-title p , a{
     color: #000000;
     font-size: 1rem;
     font-weight: 700;
+}
+.footer-title a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .footer-list img {
