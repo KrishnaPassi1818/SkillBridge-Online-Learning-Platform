@@ -332,7 +332,7 @@ nav {
     color: #454545;
     margin-top: 0.6rem;
 }
-.btn button {
+.btn a button{
     background-color: #FF9500;
     color: #ffffff;
     cursor: pointer;
@@ -341,9 +341,12 @@ nav {
     padding: 0.8rem 1.5rem;
     transition: 0.3s;
 }
-.btn button:hover{
+.btn a button:hover{
     transform: scale(90%);
     font-weight: 600;
+}
+.btn a:visited {
+    color: inherit;
 }
 
 footer {

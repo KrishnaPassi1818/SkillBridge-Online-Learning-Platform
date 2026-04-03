@@ -231,7 +231,11 @@ nav {
     transform: scale(110%);
 }
 
-.price-btn button {
+.price-btn {
+    margin-top: 1rem;
+}
+
+.price-btn a {
     margin: 1rem auto;
     padding: 1rem 14vw;
     font-size: 1.1rem;
@@ -241,7 +245,7 @@ nav {
     background-color: #FF9500;
     transition: 0.2s;
 }
-.price-btn button:hover {
+.price-btn a:hover {
     background-color: #454545;
 }
 
