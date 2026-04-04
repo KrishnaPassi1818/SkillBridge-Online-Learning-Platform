@@ -6,6 +6,8 @@
     <title>Pricing</title>
     <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/style/pricing.css">
+    <script src="/jquery-4.0.0.js"></script>
+    <script src="/script/pricing.js" defer></script>
 </head>
 <body>
     <header>
@@ -53,7 +55,7 @@
             <div class="prices">
                 <div class="price-text">
                     <p>Free Plan</p>
-                    <h2>$0<sub>/month</sub></h2>
+                    <h2 id="freePlan">$0<sub>/month</sub></h2>
                     <h6>Available Features</h6>
                 </div>
                 <div class="price-features">
@@ -85,7 +87,7 @@
             <div class="prices">
                 <div class="price-text">
                     <p>Premium Plan</p>
-                    <h2>$29<sub>/month</sub></h2>
+                    <h2 id="paidPlan">$29<sub>/month</sub></h2>
                     <h6>Available Features</h6>
                 </div>
                 <div class="price-features">

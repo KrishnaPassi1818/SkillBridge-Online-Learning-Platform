@@ -575,11 +575,10 @@ video {
     border-radius: 0.4rem;
 }
 
-#p-btn-2 {
+#p-btn-1:hover {
     background-color: #FF9500;
 }
-
-#p-btn-1:hover {
+#p-btn-2:hover {
     background-color: #FF9500;
 }
 
@@ -636,6 +635,7 @@ video {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     color: antiquewhite;
+    cursor: pointer;
     background-color: #FF9500;
     transition: 0.2s;
 }

@@ -262,10 +262,10 @@ nav {
     cursor: pointer;
 }
 #btn3 {
-    background-color: #e1e1e1;
+    background-color: #FF9500;    
     border-radius: 0.4rem;
     font-weight: 500;
-    color: #454545;
+    color:#ffffff;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -273,8 +273,8 @@ nav {
     font-weight: 600;
 }
 #btn4 {
-    background-color: #FF9500;
-    color: #ffffff;
+    background-color: #ffffff;
+    color:#454545;
     cursor: pointer;
     border-radius: 0.4rem;
     font-weight: 500;

@@ -6,6 +6,7 @@
     <title>Contact</title>
     <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/style/contact.css">
+    <script src="/script/contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -47,7 +48,7 @@
     <div class="contact-area">
         <div class="left-area">
             <div class="info">
-                <form action="">
+                <form id="contactForm" action="">
                     <div>
                         <label for="fname">First Name</label>
                         <br>
@@ -80,7 +81,7 @@
                         <textarea id="text-area" name="comment" rows="8" cols="50" placeholder="Write something here..."></textarea>
                     </div>
                     <div class="btn">
-                        <button type="submit">Send Your Message</button>
+                        <button id="submitBtn" type="submit">Send Your Message</button>
                     </div>
                 </form>
             
