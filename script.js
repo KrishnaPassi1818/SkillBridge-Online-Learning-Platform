@@ -15,3 +15,21 @@ $("#p-btn-1").click( () => {
 $(".faq-container img").click(() => {
     alert("Feature is not Available");
 })
+
+const modal = document.getElementById("storyModal");
+const btn = document.getElementById("readMoreBtn");
+const closeBtn = document.querySelector(".close-btn");
+
+btn.addEventListener("click", function() {
+  modal.style.display = "flex"; 
+});
+
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
