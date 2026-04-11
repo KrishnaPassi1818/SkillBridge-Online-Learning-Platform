@@ -15,9 +15,31 @@ $("#p-btn-1").click( () => {
     $("#paidPlan").html("<h2>$29<sub>/month</sub></h2>");
 })
 
-$(".faq-container img").click(() => {
-    alert("Feature is not Available");
-})
+
+const faqBtns = document.querySelectorAll(".faq-container img");
+const faqCloseBtns = document.querySelectorAll(".faqCloseBtn");
+
+faqBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const faqModal = btn.nextElementSibling;
+    faqModal.classList.add("show");
+  });
+});
+
+faqCloseBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const faqModal = btn.closest(".faqans");
+    faqModal.classList.remove("show");
+  });
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("faqans")) {
+    e.target.classList.remove("show");
+  }
+});
+
+
 
 const readBtns = document.querySelectorAll(".readMoreBtn");
 const closeBtns = document.querySelectorAll(".close-btn");

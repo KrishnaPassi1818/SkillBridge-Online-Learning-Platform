@@ -316,7 +316,16 @@ footer {
     padding: 0.4rem 0rem;
     color: #ffffff;
     align-items: center;
+    cursor: pointer;
     column-gap: 0.4rem;
+}
+.footer-list li:hover {
+    color: #000;
+}
+.footer-list li a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 #footer-logo {
@@ -329,18 +338,27 @@ footer {
 
 .footer-title {
     color: #000000;
-    font-weight: 700;
+    font-weight: 800;
+    cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.footer-title p {
+.footer-title p , a{
     color: #000000;
     font-size: 1rem;
+    cursor: pointer;
     font-weight: 700;
+}
+
+.footer-title a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .footer-list img {
     padding: 0rem 0.6rem;
+    cursor: pointer;
 }
 
 .copyright {

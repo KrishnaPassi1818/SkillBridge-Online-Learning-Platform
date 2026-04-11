@@ -176,7 +176,7 @@ nav {
     font-weight: 600;
 }
 
-.hero-section {
+#hero-section {
     width: 90%;
     display: flex;
     align-items: center;
@@ -202,7 +202,7 @@ nav {
     color: #454545;
 }
 
-.achievements {
+#achievements {
     width: 90%;
     margin: 0 auto;
 }
@@ -255,7 +255,7 @@ nav {
     margin-top: 0.4rem;
 }
 
-.goals {
+#goals {
     width: 90%;
     margin: 6rem auto 0rem auto;
 }
@@ -350,7 +350,7 @@ nav {
 }
 
 footer {
-    margin: 2rem auto 0rem auto;
+    margin: 0rem auto;
     padding: 4rem 3rem;
     width: 100%;
     background-color: #FF9500;
@@ -371,7 +371,16 @@ footer {
     padding: 0.4rem 0rem;
     color: #ffffff;
     align-items: center;
+    cursor: pointer;
     column-gap: 0.4rem;
+}
+.footer-list li:hover {
+    color: #000;
+}
+.footer-list li a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 #footer-logo {
@@ -384,18 +393,27 @@ footer {
 
 .footer-title {
     color: #000000;
-    font-weight: 700;
+    font-weight: 800;
+    cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.footer-title p {
+.footer-title p , a{
     color: #000000;
     font-size: 1rem;
+    cursor: pointer;
     font-weight: 700;
+}
+
+.footer-title a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .footer-list img {
     padding: 0rem 0.6rem;
+    cursor: pointer;
 }
 
 .copyright {
