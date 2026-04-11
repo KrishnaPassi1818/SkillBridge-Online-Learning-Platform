@@ -1,6 +1,9 @@
 
 $(".price-btn").click(() => {
-    alert("Feature is not Available");
+    var choice = confirm(" Do you really want to get started?");
+    if (choice == 1) {
+      window.location.href = "/html/pricing.html"
+    }
 });
 
 $("#p-btn-2").click( () => {
@@ -16,20 +19,25 @@ $(".faq-container img").click(() => {
     alert("Feature is not Available");
 })
 
-const modal = document.getElementById("storyModal");
-const btn = document.getElementById("readMoreBtn");
-const closeBtn = document.querySelector(".close-btn");
+const readBtns = document.querySelectorAll(".readMoreBtn");
+const closeBtns = document.querySelectorAll(".close-btn");
 
-btn.addEventListener("click", function() {
-  modal.style.display = "flex"; 
+readBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        const modal = btn.nextElementSibling;
+        modal.classList.add("show");
+    });
 });
 
-closeBtn.addEventListener("click", function() {
-  modal.style.display = "none";
+closeBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        const modal = btn.closest(".modal-overlay");
+        modal.classList.remove("show");
+    });
 });
 
-window.addEventListener("click", function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
+window.addEventListener("click", function(e){
+    if(event.target.classList.contains("modal-overlay")){
+        e.target.classList.remove("show");
+    }
 });
