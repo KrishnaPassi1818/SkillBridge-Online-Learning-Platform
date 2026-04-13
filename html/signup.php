@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="/style/signup.css">
 </head>
 <body>
     <header>
@@ -39,7 +39,7 @@
         <div class="heroinfo">
             <div class="info">
                 <h2>Student Testimonials</h2>
-                <p>Welcome back to your learning journey! Log in to pick up right where you left off, access your course materials, and continue building the practical skills you need for your future.</p>
+                <p>Join thousands of students who have transformed their careers through our interactive courses. Read their success stories below and see how our hands-on approach can help you achieve your learning goals.</p>
             </div>
             <div class="test">
                 <div class="test-info">The courses helped me understand web development step by step. The practical projects made learning enjoyable and boosted my confidence to build real applications.</div>
@@ -54,21 +54,26 @@
         </div>
         <div class="loginside">
             <div class="loginheading">
-                <h2>Login</h2>
-                <p>Welcome back! Please log in to access your account.</p>
+                <h2>Sign Up</h2>
+                <p>Create an account to unlock exclusive features.</p>
             </div>
             <div class="loginform">
-                <form action="">
+                <form action="signup_process.php" method="POST">
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="email" placeholder="Enter your Name" required>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email">
+                    <input type="email" id="email" placeholder="Enter your Email" required>
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your Password">
-                    <p id="forgotpassword">Forgot Password?</p>
+                    <input type="password" id="password" placeholder="Enter your Password" required>
+                    <div class="terms">
+                        <input type="checkbox" id="tnc" required>
+                        <label for="tnc">I agree with Terms and Privacy Policy</label>
+                    </div>
                     <button id="rembtn" type="button">Remember Me</button>
                     <button id="loginbtn" type="submit">Login</button>
                     <p id="or">or</p>
                     <p id="googlelogin"><img src="/pageAssets/Icon (6).png" alt="icon">Login with Google</p>
-                    <p id="signuplink">Don't have an account? <a href="/html/signup.html">Sign Up <img src="/assets/Icon.png" alt="icon"></a></p>
+                    <p id="signuplink">Already have an account? <a href="/html/login.html">Login <img src="/assets/Icon.png" alt="icon"></a></p>
                     
                 </form>
             </div>
