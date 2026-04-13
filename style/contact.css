@@ -147,7 +147,13 @@ nav {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
+    border-radius: 1rem;
     row-gap: 3rem;
+    margin-bottom: 2rem;
+}
+.left-area:hover {
+    box-shadow: 1px 1px 18px 1px rgb(153, 153, 153);
 }
 
 .info form{
@@ -161,6 +167,7 @@ nav {
     margin: 0.4rem 0 0 0;
     width: 16rem;
     padding: 0.6rem 2rem 0.6rem 0.6rem;
+    transition: 0.4s;
 }
 .info input:focus {
     outline: none;
@@ -171,6 +178,7 @@ nav {
 .message textarea{
     margin: 0.4rem 0 0 0;
     width: 22rem;
+    transition: 0.4s;
     padding: 0.6rem 2rem 0.6rem 0.6rem;
 }
 .message textarea:focus {
@@ -215,20 +223,17 @@ nav {
     margin: 1rem;
 }
 
-
-/* Adding .right-area makes this rule stronger */
 .right-area .social-icon div{
     display: flex;
     flex-direction: row; 
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    height: auto; /* Overrides the 10rem height from .right-area div */
+    height: auto; 
 }
 
-/* Adding .right-area here too to protect the inner divs */
 .right-area .social-icon div div{
-    width: auto; /* Overrides the 100% width from .right-area div */
+    width: auto;
     height: auto;
 }
 .right-area .social-icon span {
