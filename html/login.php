@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="./style/login.css">
 </head>
 <body>
     <header>
@@ -20,11 +20,11 @@
                 </div>
                 <div class="nev-items">
                     <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/html/courses.html">Courses</a></li>
-                        <li><a href="/html/about.html">About Us</a></li>
-                        <li><a href="/html/pricing.html">Pricing</a></li>
-                        <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/courses.html">Courses</a></li>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/pricing.html">Pricing</a></li>
+                        <li><a href="../html/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
