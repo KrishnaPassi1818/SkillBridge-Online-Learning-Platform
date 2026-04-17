@@ -2,7 +2,7 @@
 $(".price-btn").click(() => {
     var choice = confirm(" Do you really want to get started?");
     if (choice == 1) {
-      window.location.href = "/html/pricing.html";
+      window.location.href = "./skillbridge/html/pricing.html";
     }
 });
 
@@ -15,7 +15,7 @@ $("#p-btn-1").click( () => {
     $("#paidPlan").html("<h2>$29<sub>/month</sub></h2>");
 });
 
-$(".image").click(() => {
+document.querySelectorAll(".aboutArrow").addEventListener("click", function () {
   window.location.href = "/html/about.html";
 });
 
