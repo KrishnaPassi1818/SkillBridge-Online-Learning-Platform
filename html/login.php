@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" href="assets/Logo.png" type="image/x-icon">
+    <link rel="icon" href="../assets/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/login.css">
 </head>
 <body>
@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="buttons-container">
-                <a id="btn1" href="/html/signup.html">Sign Up</a>
-                <a id="btn2" href="/html/login.html">Login</a>
+                <a id="btn1" href="../html/signup.php">Sign Up</a>
+                <a id="btn2" href="../html/login.php">Login</a>
             </div>
         </nav>
     </header>
