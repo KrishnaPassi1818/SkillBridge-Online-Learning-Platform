@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/style/signup.css">
+    <link rel="stylesheet" href="../style/signup.css">
 </head>
 <body>
     <header>
         <div class="top-banner">
-            <p>Free Course, Sale Ends Soon, Get it Now</p>
-            <img src="/assets/arrow-image.png" alt="arrow-image">
+            <div class="ticker-content">
+                <p>Free Course, Sale Ends Soon, Get it Now</p>
+                <img src="assets/arrow-image.png" alt="arrow-image">
+            </div>
         </div>
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="/assets/Logo.png" alt="logo-image">
+                    <img src="../assets/Logo.png" alt="logo-image">
                 </div>
                 <div class="nev-items">
                     <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/html/courses.html">Courses</a></li>
-                        <li><a href="/html/about.html">About Us</a></li>
-                        <li><a href="/html/pricing.html">Pricing</a></li>
-                        <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
