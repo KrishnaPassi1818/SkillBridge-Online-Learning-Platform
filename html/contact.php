@@ -6,14 +6,14 @@
     <title>Contact</title>
     <link rel="icon" href="../assets/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/contact.css">
-    <script src="script/contact.js" defer></script>
+    <script src="../script/contact.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-banner">
             <div class="ticker-content">
                 <p>Free Course, Sale Ends Soon, Get it Now</p>
-                <img src="assets/arrow-image.png" alt="arrow-image">
+                <img src="../assets/arrow-image.png" alt="arrow-image">
             </div>
         </div>
         <nav>
@@ -90,22 +90,22 @@
         </div>
         <div class="right-area">
             <div>
-                <img src="/pageAssets/Icon.png" alt="image">
+                <img src="../pageAssets/Icon.png" alt="image">
                 <p>support@skillbridge.com</p>
             </div>
             <div>
-                <img src="/pageAssets/Icon (1).png" alt="image">
+                <img src="../pageAssets/Icon (1).png" alt="image">
                 <p>+91 836 090 6209</p>
             </div>
             <div>
-                <img src="/pageAssets/Icon (2).png" alt="image">
+                <img src="../pageAssets/Icon (2).png" alt="image">
                 <p>Amritsar, Punjab, India</p>
             </div>
             <div class="social-icon">
                 <div>
-                    <div><img src="/pageAssets/Icon (3).png" alt="image"></div>
-                    <div><img src="/pageAssets/Icon (4).png" alt="image"></div>
-                    <div><img src="/pageAssets/Icon (5).png" alt="image"></div>
+                    <div><img src="../pageAssets/Icon (3).png" alt="image"></div>
+                    <div><img src="../pageAssets/Icon (4).png" alt="image"></div>
+                    <div><img src="../pageAssets/Icon (5).png" alt="image"></div>
                 </div>
                 <span>Social Profiles</span>
             </div>
