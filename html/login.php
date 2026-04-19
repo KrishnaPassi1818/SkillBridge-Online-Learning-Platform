@@ -1,3 +1,27 @@
+<?php
+// Start session to show error/success messages
+session_start();
+
+// If user is already logged in, redirect to home
+if (isset($_SESSION['user_email'])) {
+    header("Location: ../index.html");
+    exit();
+}
+
+// Get error or success message if any
+$error_message = "";
+$success_message = "";
+
+if (isset($_SESSION['login_error'])) {
+    $error_message = $_SESSION['login_error'];
+    unset($_SESSION['login_error']); // Clear message after showing
+}
+
+if (isset($_SESSION['login_success'])) {
+    $success_message = $_SESSION['login_success'];
+    unset($_SESSION['login_success']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +71,7 @@
                 <div class="test-info">The courses helped me understand web development step by step. The practical projects made learning enjoyable and boosted my confidence to build real applications.</div>
                 <div class="person-info">
                     <div class="person-img-name">
-                        <img src="/assets/Image (6).png" alt="person-image">
+                        <img src="../assets/Image (6).png" alt="person-image">
                         <p>- Emily K.</p>
                     </div>
                     <div class="read-more">Read Full Story</div>
@@ -59,19 +83,30 @@
                 <h2>Login</h2>
                 <p>Welcome back! Please log in to access your account.</p>
             </div>
+
+            <!-- Show error or success messages -->
+            <?php if ($error_message != ""): ?>
+                <p style="color: red; font-weight: bold;"><?php echo $error_message; ?></p>
+            <?php endif; ?>
+            <?php if ($success_message != ""): ?>
+                <p style="color: green; font-weight: bold;"><?php echo $success_message; ?></p>
+            <?php endif; ?>
+
             <div class="loginform">
+                <!-- Form sends data to login_process.php using POST method -->
                 <form action="login_process.php" method="POST">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email">
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                    
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your Password">
+                    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                    
                     <p id="forgotpassword">Forgot Password?</p>
                     <button id="rembtn" type="button">Remember Me</button>
                     <button id="loginbtn" type="submit">Login</button>
                     <p id="or">or</p>
-                    <p id="googlelogin"><img src="/pageAssets/Icon (6).png" alt="icon">Login with Google</p>
-                    <p id="signuplink">Don't have an account? <a href="/html/signup.html">Sign Up <img src="/assets/Icon.png" alt="icon"></a></p>
-                    
+                    <p id="googlelogin"><img src="../pageAssets/Icon (6).png" alt="icon">Login with Google</p>
+                    <p id="signuplink">Don't have an account? <a href="../html/signup.html">Sign Up <img src="../assets/Icon.png" alt="icon"></a></p>
                 </form>
             </div>
         </div>
@@ -80,11 +115,11 @@
     <footer>
         <div class="footer-content">
             <div class="footer-list">
-                <img id="footer-logo" src="/assets/Logo.png" alt="logo-image">
+                <img id="footer-logo" src="../assets/Logo.png" alt="logo-image">
                 <ul>
-                    <li><img src="/assets/Icon (1).png" alt="icon-image">Support@skillbridge.com</li>
-                    <li><img src="/assets/Icon (2).png" alt="icon-image">+91 9181 23 2309</li>
-                    <li><img src="/assets/Icon (3).png" alt="icon-image">Somewhere in the World</li>
+                    <li><img src="../assets/Icon (1).png" alt="icon-image">Support@skillbridge.com</li>
+                    <li><img src="../assets/Icon (2).png" alt="icon-image">+91 9181 23 2309</li>
+                    <li><img src="../assets/Icon (3).png" alt="icon-image">Somewhere in the World</li>
                 </ul>
             </div>
             <div class="footer-list">
@@ -108,7 +143,9 @@
                 <ul>
                     <li class="footer-title"><p>Social Profiles</p></li>
                     <li>
-                        <img src="/assets/fb.png" alt="icons"><img src="/assets/x.png" alt="icons"><img src="/assets/linked-in.png" alt="icons">
+                        <img src="/assets/fb.png" alt="icons">
+                        <img src="/assets/x.png" alt="icons">
+                        <img src="/assets/linked-in.png" alt="icons">
                     </li>
                 </ul>
             </div>

@@ -15,8 +15,15 @@ $("#p-btn-1").click( () => {
     $("#paidPlan").html("<h2>$29<sub>/month</sub></h2>");
 });
 
-document.querySelectorAll(".aboutArrow").addEventListener("click", function () {
-  window.location.href = "/html/about.html";
+window.addEventListener("DOMContentLoaded", () => {
+  const arrows = document.querySelectorAll(".aboutArrow");
+  
+  arrows.forEach((arrow) => {
+    arrow.style.cursor = "pointer";
+    arrow.addEventListener("click", () => {
+      window.location.href = "/skillbridge/html/about.html";
+    });
+  });
 });
 
 const faqBtns = document.querySelectorAll(".faq-container img");
