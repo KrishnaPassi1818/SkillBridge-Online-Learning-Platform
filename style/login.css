@@ -23,21 +23,45 @@ header {
 }
 
 .top-banner {
-    display: flex;
-    padding: 0.6rem 0rem;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    background-color: #FF9500;
-    border-radius: 0.4rem;
-    width: 100%;
-    height: 35.7%;
+  background-color: #FF9500;
+  color: #ffffff;
+  padding: 0.6rem 0rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
 }
 
-.top-banner img {
-    width: 1rem;
-    margin-left: 1rem;
-    height: auto;
+.ticker-content {
+  display: flex;
+  align-items: center;
+  width: max-content; 
+  animation: slideRight 8s linear infinite; 
+  will-change: transform; 
+  transform: translateZ(0); 
+  backface-visibility: hidden; 
+}
+
+.ticker-content p {
+  margin: 0;
+  white-space: nowrap; 
+}
+
+.ticker-content img {
+  width: 1rem;
+  margin-left: 1rem;
+  height: auto;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }
 
 nav {

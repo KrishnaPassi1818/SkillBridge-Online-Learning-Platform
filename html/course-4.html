@@ -12,7 +12,7 @@
         <div class="top-banner">
             <div class="ticker-content">
                 <p>Free Course, Sale Ends Soon, Get it Now</p>
-                <img src="assets/arrow-image.png" alt="arrow-image">
+                <img src="../assets/arrow-image.png" alt="arrow-image">
             </div>
         </div>
         <nav>
