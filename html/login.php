@@ -1,27 +1,3 @@
-<?php
-// Start session to show error/success messages
-session_start();
-
-// If user is already logged in, redirect to home
-if (isset($_SESSION['user_email'])) {
-    header("Location: ../index.html");
-    exit();
-}
-
-// Get error or success message if any
-$error_message = "";
-$success_message = "";
-
-if (isset($_SESSION['login_error'])) {
-    $error_message = $_SESSION['login_error'];
-    unset($_SESSION['login_error']); // Clear message after showing
-}
-
-if (isset($_SESSION['login_success'])) {
-    $success_message = $_SESSION['login_success'];
-    unset($_SESSION['login_success']);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,16 +60,7 @@ if (isset($_SESSION['login_success'])) {
                 <p>Welcome back! Please log in to access your account.</p>
             </div>
 
-            <!-- Show error or success messages -->
-            <?php if ($error_message != ""): ?>
-                <p style="color: red; font-weight: bold;"><?php echo $error_message; ?></p>
-            <?php endif; ?>
-            <?php if ($success_message != ""): ?>
-                <p style="color: green; font-weight: bold;"><?php echo $success_message; ?></p>
-            <?php endif; ?>
-
             <div class="loginform">
-                <!-- Form sends data to login_process.php using POST method -->
                 <form action="login_process.php" method="POST">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your Email" required>
@@ -118,34 +85,32 @@ if (isset($_SESSION['login_success'])) {
                 <img id="footer-logo" src="../assets/Logo.png" alt="logo-image">
                 <ul>
                     <li><img src="../assets/Icon (1).png" alt="icon-image">Support@skillbridge.com</li>
-                    <li><img src="../assets/Icon (2).png" alt="icon-image">+91 9181 23 2309</li>
-                    <li><img src="../assets/Icon (3).png" alt="icon-image">Somewhere in the World</li>
+                    <li><img src="../assets/Icon (2).png" alt="icon-image">+91 806 090 6209</li>
+                    <li><img src="../assets/Icon (3).png" alt="icon-image">Amritsar, Punjab, India</li>
                 </ul>
             </div>
             <div class="footer-list">
                 <ul>
-                    <li class="footer-title"><p><a href="/index.html">Home</a></p></li>
-                    <li><a href="#benefits-section">Benefits</a></li>
-                    <li><a href="/html/courses.html">Our Courses</a></li>
-                    <li><a href="#testimonials-section">Our Testimonials</a></li>
-                    <li><a href="#faqs">Our FAQ</a></li>
+                    <li class="footer-title"><p><a href="../index.html">Home</a></p></li>
+                    <li><a href="../index.html#benefits-section">Benefits</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="../index.html#testimonials-section">Our Testimonials</a></li>
+                    <li><a href="../index.html#faqs">Our FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-list">
                 <ul>
-                    <li class="footer-title"><p><a href="/html/about.html">About Us</a></p></li>
-                    <li><a href="#hero-section">Company</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#goals">Our Goals</a></li>
+                    <li class="footer-title"><p><a href="../html/about.html">About Us</a></p></li>
+                    <li><a href="../html/about.html">Company</a></li>
+                    <li><a href="../html/about.html#achievements">Achievements</a></li>
+                    <li><a href="../html/about.html#goals">Our Goals</a></li>
                 </ul>
             </div>
             <div class="footer-list">
                 <ul>
                     <li class="footer-title"><p>Social Profiles</p></li>
                     <li>
-                        <img src="/assets/fb.png" alt="icons">
-                        <img src="/assets/x.png" alt="icons">
-                        <img src="/assets/linked-in.png" alt="icons">
+                        <img src="../assets/fb.png" alt="icons"><img src="../assets/x.png" alt="icons"><img src="../assets/linked-in.png" alt="icons">
                     </li>
                 </ul>
             </div>

@@ -1,8 +1,8 @@
 
 $(".price-btn").click(() => {
-    var choice = confirm(" Do you really want to get started?");
-    if (choice == 1) {
-      window.location.href = "./skillbridge/html/pricing.html";
+    var choice = confirm("Do you really want to get started?");
+    if (choice) {
+      window.location.href = "./html/pricing.html";
     }
 });
 
