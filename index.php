@@ -24,7 +24,7 @@
                 </div>
                 <div class="nev-items">
                     <ul>
-                        <li><a id="landingPage" href="index.html">Home</a></li>
+                        <li><a id="landingPage" href="index.php">Home</a></li>
                         <li><a href="html/courses.html">Courses</a></li>
                         <li><a href="html/about.html">About Us</a></li>
                         <li><a href="html/pricing.html">Pricing</a></li>
@@ -84,7 +84,7 @@
         <source src="assets/Creative_Office_Work_Video_Generation.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-<!-- pending -->
+    
     <div id="benefits-section">
         <div class="benefit-container">
             <h3>Benefits</h3>
@@ -316,7 +316,7 @@
             </div>
         </div>
     </div>
-<!-- pending -->
+    
     <div class="pricing-section">
         <div class="pricing-container">
             <div class="price-heading">Our Pricing</div>
@@ -490,7 +490,7 @@
             </div>
             <div class="footer-list">
                 <ul>
-                    <li class="footer-title"><p><a href="index.html">Home</a></p></li>
+                    <li class="footer-title"><p><a href="index.php">Home</a></p></li>
                     <li><a href="#benefits-section">Benefits</a></li>
                     <li><a href="html/courses.html">Our Courses</a></li>
                     <li><a href="#testimonials-section">Our Testimonials</a></li>

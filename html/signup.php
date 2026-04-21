@@ -22,7 +22,7 @@
                 </div>
                 <div class="nev-items">
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.php">Home</a></li>
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
@@ -47,7 +47,7 @@
                 <div class="test-info">The courses helped me understand web development step by step. The practical projects made learning enjoyable and boosted my confidence to build real applications.</div>
                 <div class="person-info">
                     <div class="person-img-name">
-                        <img src="/assets/Image (6).png" alt="person-image">
+                        <img src="../assets/Image (6).png" alt="person-image">
                         <p>- Emily K.</p>
                     </div>
                     <div class="read-more">Read Full Story</div>
@@ -60,23 +60,22 @@
                 <p>Create an account to unlock exclusive features.</p>
             </div>
             <div class="loginform">
-                <form action="signup_process.php" method="POST">
+                <form action="../php/signup_process.php" method="POST">
                     <label for="fname">Full Name</label>
-                    <input type="text" id="email" placeholder="Enter your Name" required>
+                    <input type="text" name="name" placeholder="Enter your Full name" required>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your Password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
                     <div class="terms">
                         <input type="checkbox" id="tnc" required>
                         <label for="tnc">I agree with Terms and Privacy Policy</label>
                     </div>
                     <button id="rembtn" type="button">Remember Me</button>
-                    <button id="loginbtn" type="submit">Login</button>
+                    <button id="loginbtn" type="submit">Sign Up</button>
                     <p id="or">or</p>
-                    <p id="googlelogin"><img src="/pageAssets/Icon (6).png" alt="icon">Login with Google</p>
-                    <p id="signuplink">Already have an account? <a href="/html/login.html">Login <img src="/assets/Icon.png" alt="icon"></a></p>
-                    
+                    <p id="googlelogin"><img src="../pageAssets/Icon (6).png" alt="icon">Login with Google</p>
+                    <p id="signuplink">Already have an account? <a href="/html/login.html">Login <img src="../assets/Icon.png" alt="icon"></a></p>
                 </form>
             </div>
         </div>
@@ -85,20 +84,20 @@
     <footer>
         <div class="footer-content">
             <div class="footer-list">
-                <img id="footer-logo" src="/assets/Logo.png" alt="logo-image">
+                <img id="footer-logo" src="../assets/Logo.png" alt="logo-image">
                 <ul>
-                    <li><img src="/assets/Icon (1).png" alt="icon-image">Support@skillbridge.com</li>
-                    <li><img src="/assets/Icon (2).png" alt="icon-image">+91 9181 23 2309</li>
-                    <li><img src="/assets/Icon (3).png" alt="icon-image">Somewhere in the World</li>
+                    <li><img src="../assets/Icon (1).png" alt="icon-image">Support@skillbridge.com</li>
+                    <li><img src="../assets/Icon (2).png" alt="icon-image">+91 9181 23 2309</li>
+                    <li><img src="../assets/Icon (3).png" alt="icon-image">Somewhere in the World</li>
                 </ul>
             </div>
             <div class="footer-list">
                 <ul>
-                    <li class="footer-title"><p><a href="/index.html">Home</a></p></li>
-                    <li><a href="#benefits-section">Benefits</a></li>
-                    <li><a href="/html/courses.html">Our Courses</a></li>
-                    <li><a href="#testimonials-section">Our Testimonials</a></li>
-                    <li><a href="#faqs">Our FAQ</a></li>
+                    <li class="footer-title"><p><a href="../index.php">Home</a></p></li>
+                    <li><a href="../index.php#benefits-section">Benefits</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="../index.php#testimonials-section">Our Testimonials</a></li>
+                    <li><a href="../index.php#faqs">Our FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-list">
@@ -113,7 +112,7 @@
                 <ul>
                     <li class="footer-title"><p>Social Profiles</p></li>
                     <li>
-                        <img src="/assets/fb.png" alt="icons"><img src="/assets/x.png" alt="icons"><img src="/assets/linked-in.png" alt="icons">
+                        <img src="../assets/fb.png" alt="icons"><img src="../assets/x.png" alt="icons"><img src="../assets/linked-in.png" alt="icons">
                     </li>
                 </ul>
             </div>

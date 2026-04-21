@@ -186,6 +186,7 @@ nav {
 .course-btn button{
     cursor: pointer;
     font-weight: 500;
+    background-color: aqua;
     transition: 0.1s;
 }
 .course-btn button:hover {

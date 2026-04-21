@@ -23,7 +23,7 @@
                 </div>
                 <div class="nev-items">
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.php">Home</a></li>
                         <li><a href="courses.html">Courses</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
@@ -132,10 +132,11 @@
             </div>
             <div class="footer-list">
                 <ul>
-                    <li class="footer-title"><p><a href="../html/about.html">About Us</a></p></li>
-                    <li><a href="../html/about.html">Company</a></li>
-                    <li><a href="../html/about.html#achievements">Achievements</a></li>
-                    <li><a href="../html/about.html#goals">Our Goals</a></li>
+                    <li class="footer-title"><p><a href="../index.php">Home</a></p></li>
+                    <li><a href="../index.php#benefits-section">Benefits</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="../index.php#testimonials-section">Our Testimonials</a></li>
+                    <li><a href="../index.php#faqs">Our FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-list">
