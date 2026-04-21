@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["user_name"] = $user["name"];
             $_SESSION["user_email"] = $user["email"];
 
-            header("Location: ../index.php"); // redirect after login
+            header("Location: /skillbridge/index.php?success=logged_in");
             exit();
         } else {
             header("Location: /skillbridge/html/login.php?error=invalid_password");

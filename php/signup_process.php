@@ -1,46 +1,35 @@
 <?php
 require_once("../config/db.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = trim($_POST["name"]);
-    $email = trim($_POST["email"]);
-    $password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: /skillbridge/html/signup.php");
+    exit();
+}
 
-    if (empty($name) || empty($email) || empty($password)) {
-        die("All fields are required.");
-    }
+$name = trim($_POST["name"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$password = $_POST["password"] ?? "";
 
-    // Hash password
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+if ($name === "" || $email === "" || $password === "") {
+    header("Location: /skillbridge/html/signup.php?error=empty_fields");
+    exit();
+}
 
-    // Prepared statement (safe)
-    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $hashedPassword);
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    if ($stmt->execute()) {
-        header("Location: ../html/login.php?signup=success");
+$stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $name, $email, $hashedPassword);
+
+try {
+    $stmt->execute();
+    header("Location: /skillbridge/html/login.php?success=signed_up");
+    exit();
+} catch (mysqli_sql_exception $e) {
+    if ($e->getCode() == 1062) {
+        header("Location: /skillbridge/html/signup.php?error=email_exists");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-}
-$conn->close();
-
-?>
-    <?php
-    require_once("../config/db.php");
-
-    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: /skillbridge/html/signup.php");
+        header("Location: /skillbridge/html/signup.php?error=server_error");
         exit();
     }
-
-    $name = trim($_POST["name"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $password = $_POST["password"] ?? "";
-
-    if ($name === "" || $email === "" || $password === "") {
-        die("All fields are required.");
 }

@@ -1,3 +1,10 @@
+<?php
+    $loginMsg = "";
+    if (isset($_GET['success']) && $_GET['success'] === 'logged_in') {
+        $loginMsg = "Login successful! Welcome.";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -518,5 +525,11 @@
             <p>© 2023 Skillbridge. All rights reserved.</p>
         </div>
     </footer>
+
+    <?php if (!empty($loginMsg)): ?>
+        <script>
+            alert("<?php echo $loginMsg; ?>");
+        </script>
+    <?php endif; ?>
 </body>
 </html>

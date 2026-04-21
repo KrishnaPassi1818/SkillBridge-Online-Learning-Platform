@@ -1,3 +1,16 @@
+<?php
+    $msg = "";
+    if (isset($_GET["success"])) {
+        $msg = "Message sent successfully!";
+    } elseif (isset($_GET["error"])) {
+        if ($_GET["error"] === "empty_fields") {
+            $msg = "Please fill all fields.";
+        } else {
+            $msg = "Could not send message. Please try again.";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,37 +63,37 @@
     <div class="contact-area">
         <div class="left-area">
             <div class="info">
-                <form id="contactForm" action="">
+                <form id="contactForm" action="../php/contact_process.php" method="POST">
                     <div>
                         <label for="fname">First Name</label>
                         <br>
-                        <input type="text" id="fname" placeholder="Enter First Name">
+                        <input type="text" id="fname" name="first_name" placeholder="Enter First Name" required>
                     </div>
                     <div>
                         <label for="lname">Last Name</label>
                         <br>
-                        <input type="text" id="lname" placeholder="Enter Last Name">
+                        <input type="text" id="lname" name="last_name" placeholder="Enter Last Name" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
                         <br>
-                        <input type="email" id="email" placeholder="Enter your Email">
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                     </div>
                     <div>
                         <label for="phone">Phone</label>
                         <br>
-                        <input type="number" id="phone" placeholder="Enter Phone Number">
+                        <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required>
                     </div>
                     <div>
                         <label for="subject">Subject</label>
                         <br>
-                        <input type="text" id="subject" placeholder="Enter your Subject">
+                        <input type="text" id="subject" name="subject" placeholder="Enter your Subject" required>
                     </div>
                     </div>
                     <div class="message">
                         <label for="text-area">Message</label>
                         <br>
-                        <textarea id="text-area" name="comment" rows="8" cols="50" placeholder="Write something here..."></textarea>
+                        <textarea id="text-area" name="message" rows="8" cols="50" placeholder="Write something here..." required></textarea>
                     </div>
                     <div class="btn">
                         <button id="submitBtn" type="submit">Send Your Message</button>
@@ -152,5 +165,11 @@
             <p>© 2023 Skillbridge. All rights reserved.</p>
         </div>
     </footer>
+
+    <?php if (!empty($msg)): ?>
+        <script>
+            alert("<?php echo $msg; ?>");
+        </script>
+    <?php endif; ?>
 </body>
 </html>

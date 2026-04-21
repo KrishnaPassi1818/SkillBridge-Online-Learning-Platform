@@ -1,3 +1,30 @@
+<?php
+    $msg = "";
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] === 'user_not_found') {
+            $msg = "User does not exist. Please sign up first.";
+        } elseif ($_GET['error'] === 'invalid_password') {
+            $msg = "Incorrect password. Please try again.";
+        }
+    }
+?>
+
+<?php
+    $msg = "";
+
+    if (isset($_GET['success']) && $_GET['success'] === 'signed_up') {
+        $msg = "Signup successful! Please login.";
+    }
+
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] === 'user_not_found') {
+            $msg = "User does not exist. Please sign up first.";
+        } elseif ($_GET['error'] === 'invalid_password') {
+            $msg = "Incorrect password. Please try again.";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,5 +146,17 @@
             <p>© 2023 Skillbridge. All rights reserved.</p>
         </div>
     </footer>
+
+    <?php if (!empty($msg)): ?>
+        <script>
+            alert("<?php echo $msg; ?>");
+        </script>
+    <?php endif; ?>
+
+    <?php if (!empty($msg)): ?>
+        <script>
+            alert("<?php echo $msg; ?>");
+        </script>
+    <?php endif; ?>
 </body>
 </html>

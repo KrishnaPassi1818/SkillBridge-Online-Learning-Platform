@@ -1,3 +1,17 @@
+<?php
+    $msg = "";
+
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] === 'email_exists') {
+            $msg = "This email is already registered. Please login instead.";
+        } elseif ($_GET['error'] === 'empty_fields') {
+            $msg = "Please fill all fields.";
+        } else {
+            $msg = "Something went wrong. Please try again.";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,5 +135,11 @@
             <p>© 2023 Skillbridge. All rights reserved.</p>
         </div>
     </footer>
+
+    <?php if (!empty($msg)): ?>
+        <script>
+            alert("<?php echo $msg; ?>");
+        </script>
+    <?php endif; ?>
 </body>
 </html>
