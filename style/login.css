@@ -238,6 +238,7 @@ form input:focus {
     text-align: end;
     color: #454545;
     cursor: pointer;
+    transition: 3s;
 }
 #forgotpassword:hover {
     color: #6f6f6f;
@@ -247,6 +248,7 @@ form input:focus {
 #rembtn {
     color: #454545;
     cursor: pointer;
+    background-color: #ffffff;
 }
 #rembtn:hover {
     text-decoration: underline;

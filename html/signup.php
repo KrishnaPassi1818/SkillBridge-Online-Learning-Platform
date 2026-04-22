@@ -20,6 +20,8 @@
     <title>Sign Up</title>
     <link rel="icon" href="../assets/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/signup.css">
+    <script src="../jquery-4.0.0.js"></script>
+    <script src="../script/signup.js"></script>
 </head>
 <body>
     <header>
@@ -89,7 +91,7 @@
                     <button id="loginbtn" type="submit">Sign Up</button>
                     <p id="or">or</p>
                     <p id="googlelogin"><img src="../pageAssets/Icon (6).png" alt="icon">Login with Google</p>
-                    <p id="signuplink">Already have an account? <a href="/html/login.html">Login <img src="../assets/Icon.png" alt="icon"></a></p>
+                    <p id="signuplink">Already have an account? <a href="../html/login.php">Login <img src="../assets/Icon.png" alt="icon"></a></p>
                 </form>
             </div>
         </div>

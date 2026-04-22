@@ -247,6 +247,7 @@ form input:focus {
 #rembtn {
     color: #454545;
     cursor: pointer;
+    background-color: #ffffff;
 }
 #rembtn:hover {
     text-decoration: underline;
