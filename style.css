@@ -482,6 +482,7 @@ video {
 
 .person-info button {
     cursor: pointer;
+    background-color: #ffffff;
     transition: 0.3s;
 }
 .person-info button:hover {
@@ -598,6 +599,8 @@ video {
     padding: 0.8rem 1.8rem;
     cursor: pointer;
     border-radius: 0.4rem;
+    background-color: #ffffff;
+    transition: 0.2s;
 }
 
 #p-btn-1:hover {
